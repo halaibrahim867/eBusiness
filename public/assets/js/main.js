@@ -1,5 +1,6 @@
 /**
-* Template Name: eBusiness - v4.10.0
+* Template Name: eBusiness
+* Updated: Mar 10 2023 with Bootstrap v5.2.3
 * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/

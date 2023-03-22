@@ -20,3 +20,9 @@ Route::get('/', function () {
 Route::get('/home', function () {
     return view('eBusiness');
 });
+
+//Route to enter member of team
+Route::get('/create-team','App\Http\Controllers\Admin\CrudController@create');
+Route::post('/store-team','App\Http\Controllers\Admin\CrudController@store')
+->name('team.store');
+Route::get('/data','App\Http\Controllers\Admin\CrudController@read');

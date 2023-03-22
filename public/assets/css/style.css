@@ -1,5 +1,6 @@
 /**
-* Template Name: eBusiness - v4.10.0
+* Template Name: eBusiness
+* Updated: Mar 10 2023 with Bootstrap v5.2.3
 * Template URL: https://bootstrapmade.com/ebusiness-bootstrap-corporate-template/
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
@@ -1534,7 +1535,6 @@ div#preloader {
   margin: 0 10px -6px 0;
   border: 3px solid #18d26e;
   border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
   animation: animate-loading 1s linear infinite;
 }
 
@@ -1569,16 +1569,6 @@ div#preloader {
   text-transform: uppercase;
   transition: all 0.3s ease 0s;
   border-radius: 30px;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @keyframes animate-loading {

@@ -13,7 +13,9 @@
     <link href="{{URL::asset('assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700|Raleway:300,400,400i,500,500i,700,800,900"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link href="{{URL::asset('assets/vendor/animate.css/animate.min.css')}}" rel="stylesheet">
@@ -37,13 +39,10 @@
 <body>
 
 <!-- ======= Header ======= -->
-
 @extends('components.header')
 
-@section('content')
-
-    @stop
-
+@section('header')
+@endsection
 <!-- ======= hero Section ======= -->
 <section id="hero">
     <div class="hero-container">
@@ -53,12 +52,15 @@
 
             <div class="carousel-inner" role="listbox">
 
-                <div class="carousel-item active" style="background-image: url({{URL::asset('assets/img/hero-carousel/1.jpg')}})">
+                <div class="carousel-item active"
+                     style="background-image: url({{URL::asset('assets/img/hero-carousel/1.jpg')}})">
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">The Best Business Information </h2>
-                            <p class="animate__animated animate__fadeInUp">We're In The Business Of Helping You Start Your Business</p>
-                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            <p class="animate__animated animate__fadeInUp">We're In The Business Of Helping You Start
+                                Your Business</p>
+                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                                Started</a>
                         </div>
                     </div>
                 </div>
@@ -68,8 +70,10 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">At vero eos et accusamus</h2>
-                            <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for Your Family</p>
-                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            <p class="animate__animated animate__fadeInUp">Helping Business Security & Peace of Mind for
+                                Your Family</p>
+                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                                Started</a>
                         </div>
                     </div>
                 </div>
@@ -79,8 +83,10 @@
                     <div class="carousel-container">
                         <div class="container">
                             <h2 class="animate__animated animate__fadeInDown">Temporibus autem quibusdam</h2>
-                            <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem</p>
-                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                            <p class="animate__animated animate__fadeInUp">Beatae vitae dicta sunt explicabo. Nemo enim
+                                ipsam voluptatem</p>
+                            <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get
+                                Started</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +103,8 @@
 
         </div>
     </div>
-</section><!-- End Hero Section -->
+</section>
+<!-- End Hero Section -->
 
 <main id="main">
 
@@ -130,7 +137,9 @@
                                 <h4 class="sec-head">project Maintenance</h4>
                             </a>
                             <p>
-                                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                                Redug Lagre dolor sit amet, consectetur adipisicing elit. Itaque quas officiis iure
+                                aspernatur sit adipisci quaerat unde at nequeRedug Lagre dolor sit amet, consectetur
+                                adipisicing elit. Itaque quas officiis iure
                             </p>
                             <ul>
                                 <li>
@@ -155,7 +164,8 @@
                 <!-- End col-->
             </div>
         </div>
-    </div><!-- End About Section -->
+    </div>
+    <!-- End About Section -->
 
     <!-- ======= Services Section ======= -->
     <div id="services" class="services-area area-padding">
@@ -178,7 +188,8 @@
                                 </a>
                                 <h4>Expert Coder</h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -194,7 +205,8 @@
                                 </a>
                                 <h4>Creative Designer</h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -211,7 +223,8 @@
                                 </a>
                                 <h4>Wordpress Developer</h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -228,7 +241,8 @@
                                 </a>
                                 <h4>Social Marketer </h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -246,7 +260,8 @@
                                 </a>
                                 <h4>Seo Expart</h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -264,7 +279,8 @@
                                 </a>
                                 <h4>24/7 Support</h4>
                                 <p>
-                                    will have to make sure the prototype looks finished by inserting text or photo.make sure the prototype looks finished by.
+                                    will have to make sure the prototype looks finished by inserting text or photo.make
+                                    sure the prototype looks finished by.
                                 </p>
                             </div>
                         </div>
@@ -273,8 +289,9 @@
                 </div>
             </div>
         </div>
-    </div><!-- End Services Section -->
+    </div>
 
+    <!-- End Services Section -->
     <!-- ======= Team Section ======= -->
     <div id="team" class="our-team-area area-padding">
         <div class="container">
@@ -286,26 +303,28 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single-team-member">
+
+                @foreach($teams as $person)
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                        <div class="single-team-member">
                         <div class="team-img">
                             <a href="#">
-                                <img src="{{URL::asset('assets/img/team/1.jpg')}}" alt="">
+                                <img src="{{ asset('team/'.$person->photo)}}" alt="{{$person->name}}">
                             </a>
                             <div class="team-social-icon text-center">
                                 <ul>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{url($person-> facebook_account)}}">
                                             <i class="bi bi-facebook"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{url($person-> twitter_account)}}">
                                             <i class="bi bi-twitter"></i>
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="#">
+                                        <a href="{{url($person-> instagram_account)}}">
                                             <i class="bi bi-instagram"></i>
                                         </a>
                                     </li>
@@ -313,111 +332,17 @@
                             </div>
                         </div>
                         <div class="team-content text-center">
-                            <h4>Jhon Mickel</h4>
-                            <p>Seo</p>
+                            <h4>{{$person -> name}}</h4>
+                            <p>{{$person -> job_description}}</p>5
+                        </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
+
+
+
                 <!-- End column -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single-team-member">
-                        <div class="team-img">
-                            <a href="#">
-                                <img src="{{URL::asset('assets/img/team/2.jpg')}}" alt="">
-                            </a>
-                            <div class="team-social-icon text-center">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content text-center">
-                            <h4>Andrew Arnold</h4>
-                            <p>Web Developer</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End column -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single-team-member">
-                        <div class="team-img">
-                            <a href="#">
-                                <img src="{{URL::asset('assets/img/team/3.jpg')}}" alt="">
-                            </a>
-                            <div class="team-social-icon text-center">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content text-center">
-                            <h4>Lellien Linda</h4>
-                            <p>Web Design</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End column -->
-                <div class="col-md-3 col-sm-3 col-xs-12">
-                    <div class="single-team-member">
-                        <div class="team-img">
-                            <a href="#">
-                                <img src="{{URL::asset('assets/img/team/4.jpg')}}" alt="">
-                            </a>
-                            <div class="team-social-icon text-center">
-                                <ul>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="team-content text-center">
-                            <h4>Jhon Powel</h4>
-                            <p>Seo Expert</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- End column -->
+
             </div>
         </div>
     </div><!-- End Team Section -->
@@ -466,10 +391,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app portfolio-item">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/1.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/1.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/1.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/1.jpg')}}">
                                         <h4>Business City</h4>
                                         <span>Web Development</span>
                                     </a>
@@ -484,10 +410,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/2.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/2.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/2.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/2.jpg')}}">
                                         <h4>Blue Sea</h4>
                                         <span>Photosho</span>
                                     </a>
@@ -502,10 +429,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/3.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/3.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/3.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/3.jpg')}}">
                                         <h4>Beautiful Nature</h4>
                                         <span>Web Design</span>
                                     </a>
@@ -520,10 +448,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/4.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/4.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/4.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/4.jpg')}}">
                                         <h4>Creative Team</h4>
                                         <span>Web design</span>
                                     </a>
@@ -538,10 +467,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/5.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/5.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/5.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/5.jpg')}}">
                                         <h4>Beautiful Flower</h4>
                                         <span>Web Development</span>
                                     </a>
@@ -556,10 +486,11 @@
                 <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
-                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/6.jpg')}}" alt="" /></a>
+                            <a href="#"><img src="{{URL::asset('assets/img/portfolio/6.jpg')}}" alt=""/></a>
                             <div class="add-actions text-center">
                                 <div class="project-dec">
-                                    <a class="portfolio-lightbox" data-gallery="myGallery" href="{{URL::asset('assets/img/portfolio/6.jpg')}}">
+                                    <a class="portfolio-lightbox" data-gallery="myGallery"
+                                       href="{{URL::asset('assets/img/portfolio/6.jpg')}}">
                                         <h4>Night Hill</h4>
                                         <span>Photoshop</span>
                                     </a>
@@ -587,7 +518,7 @@
             <div class="row">
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="pri_table_list">
-                        <h3>basic <br /> <span>$80 / month</span></h3>
+                        <h3>basic <br/> <span>$80 / month</span></h3>
                         <ol>
                             <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
                             <li class="check"><i class="bi bi-x"></i><span>Full access</span></li>
@@ -604,7 +535,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="pri_table_list active">
                         <span class="saleon">top sale</span>
-                        <h3>standard <br /> <span>$110 / month</span></h3>
+                        <h3>standard <br/> <span>$110 / month</span></h3>
                         <ol>
                             <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
                             <li class="check"><i class="bi bi-check"></i><span>Full access</span></li>
@@ -620,7 +551,7 @@
                 </div>
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="pri_table_list">
-                        <h3>premium <br /> <span>$150 / month</span></h3>
+                        <h3>premium <br/> <span>$150 / month</span></h3>
                         <ol>
                             <li class="check"><i class="bi bi-check"></i><span>Online system</span></li>
                             <li class="check"><i class="bi bi-check"></i><span>Full access</span></li>
@@ -647,12 +578,15 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{URL::asset('assets/img/testimonials/testimonials-1.jpg')}}" class="testimonial-img" alt="">
+                            <img src="{{URL::asset('assets/img/testimonials/testimonials-1.jpg')}}"
+                                 class="testimonial-img" alt="">
                             <h3>Saul Goodman</h3>
                             <h4>Ceo &amp; Founder</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
+                                risus at semper.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -660,12 +594,15 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{URL::asset('assets/img/testimonials/testimonials-2.jpg')}}" class="testimonial-img" alt="">
+                            <img src="{{URL::asset('assets/img/testimonials/testimonials-2.jpg')}}"
+                                 class="testimonial-img" alt="">
                             <h3>Sara Wilsson</h3>
                             <h4>Designer</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
+                                legam anim culpa.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -673,12 +610,14 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{URL::asset('assets/img/testimonials/testimonials-3.jpg')}}" class="testimonial-img" alt="">
+                            <img src="{{URL::asset('assets/img/testimonials/testimonials-3.jpg')}}"
+                                 class="testimonial-img" alt="">
                             <h3>Jena Karlis</h3>
                             <h4>Store Owner</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -686,12 +625,15 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{URL::asset('assets/img/testimonials/testimonials-4.jpg')}}" class="testimonial-img" alt="">
+                            <img src="{{URL::asset('assets/img/testimonials/testimonials-4.jpg')}}"
+                                 class="testimonial-img" alt="">
                             <h3>Matt Brandon</h3>
                             <h4>Freelancer</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
+                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
+                                labore illum veniam.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -699,12 +641,15 @@
 
                     <div class="swiper-slide">
                         <div class="testimonial-item">
-                            <img src="{{URL::asset('assets/img/testimonials/testimonials-5.jpg')}}" class="testimonial-img" alt="">
+                            <img src="{{URL::asset('assets/img/testimonials/testimonials-5.jpg')}}"
+                                 class="testimonial-img" alt="">
                             <h3>John Larson</h3>
                             <h4>Entrepreneur</h4>
                             <p>
                                 <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
+                                culpa fore nisi cillum quid.
                                 <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                             </p>
                         </div>
@@ -752,7 +697,9 @@
                                     <a href="blog.html">Assumenda repud eum veniam</a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi
+                                    sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum
+                                    veniam optio modi sit explicabo nisi magnam quibusdam.
                                 </p>
                             </div>
                             <span>
@@ -784,7 +731,9 @@
                                     <a href="blog.html">Explicabo magnam quibusdam.</a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi
+                                    sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum
+                                    veniam optio modi sit explicabo nisi magnam quibusdam.
                                 </p>
                             </div>
                             <span>
@@ -816,7 +765,9 @@
                                     <a href="blog.html">Lorem ipsum dolor sit amet</a>
                                 </h4>
                                 <p>
-                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum veniam optio modi sit explicabo nisi magnam quibusdam.
+                                    Lorem ipsum dolor sit amet conse adipis elit Assumenda repud eum veniam optio modi
+                                    sit explicabo nisi magnam quibusdam.sit amet conse adipis elit Assumenda repud eum
+                                    veniam optio modi sit explicabo nisi magnam quibusdam.
                                 </p>
                             </div>
                             <span>
@@ -899,7 +850,9 @@
                     <!-- Start Google Map -->
                     <div class="col-md-6">
                         <!-- Start Map -->
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452" width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22864.11283411948!2d-73.96468908098944!3d40.630720240038435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sbg!4v1540447494452"
+                            width="100%" height="380" frameborder="0" style="border:0" allowfullscreen></iframe>
                         <!-- End Map -->
                     </div>
                     <!-- End Google Map -->
@@ -909,23 +862,29 @@
                         <div class="form contact-form">
                             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                                 <div class="form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" class="form-control" id="name"
+                                           placeholder="Your Name" required>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                                    <input type="email" class="form-control" name="email" id="email"
+                                           placeholder="Your Email" required>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+                                    <input type="text" class="form-control" name="subject" id="subject"
+                                           placeholder="Subject" required>
                                 </div>
                                 <div class="form-group mt-3">
-                                    <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                                    <textarea class="form-control" name="message" rows="5" placeholder="Message"
+                                              required></textarea>
                                 </div>
                                 <div class="my-3">
                                     <div class="loading">Loading</div>
                                     <div class="error-message"></div>
                                     <div class="sent-message">Your message has been sent. Thank you!</div>
                                 </div>
-                                <div class="text-center"><button type="submit">Send Message</button></div>
+                                <div class="text-center">
+                                    <button type="submit">Send Message</button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -938,12 +897,15 @@
 </main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-@extends('components.footer')
-@section('content')
-@stop
 
+@extends('components.footer')
+
+@section('footer')
+@endsection
+<!-- End  Footer -->
 <div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
 <script src="{{URL::asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js')}}}"></script>

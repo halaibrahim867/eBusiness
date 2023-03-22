@@ -1,3 +1,4 @@
+
 <footer>
     <div class="footer-area">
         <div class="container">
@@ -86,4 +87,5 @@
             </div>
         </div>
     </div>
-</footer><!-- End  Footer -->
+</footer>
+
