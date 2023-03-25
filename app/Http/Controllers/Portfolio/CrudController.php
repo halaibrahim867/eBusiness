@@ -1,29 +1,30 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
-use App\Traits\dataTrait;
+namespace App\Http\Controllers\Portfolio;
+
 use App\Http\Controllers\Controller;
+use App\Models\Portfolio;
 use App\Models\Team;
+use App\Traits\dataTrait;
 use Illuminate\Http\Request;
 
 class CrudController extends Controller
 {
+    //
     use dataTrait;
     public function create(){
-        return view('forms.team');
+        return view('forms.portfolio');
     }
 
     public function store(Request $request){
         //return $request;
-        $file_name=$this ->saveImage($request -> photo, 'team');
+        $file_name=$this ->saveImage($request -> photo, 'portfolio');
         //$path = $request->file('photo')->store('public/photos');
 
-        Team::create([
+        Portfolio::create([
             'name'=>$request->name,
-            'facebook_account'=>  $request-> facebook_account,
-            'instagram_account'=> $request-> instagram_account,
-            'twitter_account'=>   $request-> twitter_account,
-            'job_description'=>   $request-> job_description,
+            'description'=>$request->description,
+            'portfolio_categories_id'=>$request->portfolio_categories_id,
             'photo'=> $file_name,
         ]);
 
