@@ -22,20 +22,27 @@ Route::get('/home', function () {
 });
 
 //Route to enter member of team
-Route::get('/create-team','App\Http\Controllers\Admin\CrudController@create');
-Route::post('/store-team','App\Http\Controllers\Admin\CrudController@store')
+Route::get('/create-team','App\Http\Controllers\Admin\CrudController@createTeam');
+Route::post('/store-team','App\Http\Controllers\Admin\CrudController@storeTeam')
 ->name('team.store');
-Route::get('/data','App\Http\Controllers\Admin\CrudController@read');
+//Route::get('/data','App\Http\Controllers\Admin\CrudController@readTeam');
 
 //Route to enter portfolio
-Route::get('/create-portfolio','App\Http\Controllers\Portfolio\CrudController@create');
-Route::post('/store-portfolio','App\Http\Controllers\Portfolio\CrudController@store')
+Route::get('/create-portfolio','App\Http\Controllers\Admin\CrudController@createPortfolio');
+Route::post('/store-portfolio','App\Http\Controllers\Admin\CrudController@storePortfolio')
     ->name('portfolio.store');
-Route::get('/data','App\Http\Controllers\Portfolio\CrudController@read');
+
+Route::get('/data','App\Http\Controllers\Admin\CrudController@read');
+
+
+
 
 // to check relationship between porfoliocategory and portfolio
+/*
 Route::get('/test',function(){
     $portfoloi_cat=\App\Models\PortfolioCategory::find(1);
     $portfolio=$portfoloi_cat->portfolio;
    return dd($portfolio);
-});
+});*/
+
+

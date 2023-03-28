@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Team;
 use App\Traits\dataTrait;
 use App\Http\Controllers\Controller;
 use App\Models\Team;
+use App\Models\Portfolio;
 use Illuminate\Http\Request;
 
 class CrudController extends Controller
@@ -33,7 +34,7 @@ class CrudController extends Controller
         $teams=Team::all();
         //$teams=Team::select('id','name', 'job_description',
         //'facebook_account','twitter_account', 'instagram_account', 'photo');
-        return view( 'eBusiness',compact('teams'));
+        return view( 'eBusiness',['teams'=>$teams , 'portfolios'=>$portfolio]);
     }
 
 
