@@ -7,9 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Article extends Model
 {
-
     use HasFactory;
-    public  function employee(){
-        return $this->belongsTo('App\Models\Employee','employee_id','id');
-    }
+
+    protected $table='articles';
+    protected $fillable=['id','photo','title','content','team_id','created_at','updated_at'];
+    public $timestamps=true;
+
+
 }

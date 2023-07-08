@@ -3,8 +3,11 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Article;
+use App\Models\Comment;
 use App\Models\Portfolio;
-
+use App\Models\Subscriper;
+use Carbon\Carbon;
 use App\Models\PortfolioCategory;
 use App\Models\Team;
 use App\Traits\dataTrait;
@@ -60,10 +63,12 @@ class CrudController extends Controller
         return view('eBusiness',compact('portfolio'));
     }*/
 
-    public function  read(){
+    public function  readHome(){
         $portfolios=Portfolio::all();
         $teams=Team::all();
         $portfolio=PortfolioCategory::all();
+
+
         //$teams=Team::select('id','name', 'job_description',
         //'facebook_account','twitter_account', 'instagram_account', 'photo');
         return view( 'eBusiness',compact('portfolios','teams','portfolio'));
@@ -76,6 +81,10 @@ class CrudController extends Controller
     }*/
 
 
+
+
+
+    //filter is not work
     public function filterByCategory(Request $request){
         $categoryId=$request->input('categoryId');
         $categoryName=$request->input('categoryName');
@@ -87,6 +96,82 @@ class CrudController extends Controller
         }
 
         return view('layouts.portfolio',compact('portfolio'));
+    }
+
+
+
+    public function createpost(){
+        return view('forms.post');
+    }
+
+    public function storePost(Request $request){
+        //return $request;
+        $file_name=$this ->saveImage($request -> photo, 'post');
+        //$path = $request->file('photo'
+        //)->store('public/photos');
+
+        Article::create([
+            'title'=>$request->title,
+            'content'=>$request->content,
+            'employee_id'=>$request->employee_id,
+            'photo'=> $file_name,
+        ]);
+    }
+  /*  public function storeComments(Request $request){
+
+        Comment::create([
+            'content'=>content,
+            'article_id'=>article_id,
+            'subscriper_id'=>subscriper_id,
+            'created_at'=>created_at,
+            'updated_at'=>updated_at
+
+        ]);
+    }*/
+    public function storeComment(Request $request){
+        $validatedDate=$request->validate([
+            'name'=>'required|max:255',
+            'email'=>'required|email|max:255',
+            'content'=>'required|max:255',
+            'article_id'=>'required|exists:articles,id'
+        ]);
+        $subscriper=Subscriper::firstOrCreate([
+            'name'=>$validatedDate['name'],
+            'email'=>$validatedDate['email']
+        ]);
+        $comment=new Comment();
+        $comment->content=$validatedDate['content'];
+        $comment->article_id=$validatedDate['article_id'];
+        $comment->subscriper_id=$subscriper->id;
+
+        $comment->save();
+
+        return redirect()->back()->with('success','Comment Submitted Successfully!');
+    }
+    public function readBlog(){
+        $articles=Article::paginate(3);
+
+        $comments = $articles->pluck('comments')->flatten();
+        $commentCount = $comments->count();
+
+        return view('blog',compact('articles','commentCount'));
+    }
+    public function readBlogDetails($article_id){
+        $article=Article::find($article_id);
+        $comments=$article->comments;
+        $commentCount = $comments->count();
+        $articles=Article::all();
+        //find($article_id);
+        return view('blogdetails',compact('articles','comments','commentCount'));
+    }
+    // to check data that i want retrive about articles
+
+    public function showArticles($article_id){
+        $articles=Article::find($article_id);
+        $comments=$articles->comments;
+
+       var_dump($articles);
+       // return view('welcome',compact('comment'));
     }
 
 

@@ -12,14 +12,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/home', function () {
-    return view('eBusiness');
-});
+//Route::get('/{article_id}','App\Http\Controllers\Admin\CrudController@showArticles');
 
 //Route to enter member of team
 Route::get('/create-team','App\Http\Controllers\Admin\CrudController@createTeam');
@@ -32,9 +25,22 @@ Route::get('/create-portfolio','App\Http\Controllers\Admin\CrudController@create
 Route::post('/store-portfolio','App\Http\Controllers\Admin\CrudController@storePortfolio')
     ->name('portfolio.store');
 
-Route::get('/data','App\Http\Controllers\Admin\CrudController@read');
+
+Route::group(['prefix'=>'eBusiness'],function(){
+    Route::get('/home','App\Http\Controllers\Admin\CrudController@readHome');
+    Route::get('/blog','App\Http\Controllers\Admin\CrudController@readBlog')
+        ->name('blog');
+    Route::get('/blogdetails/{article_id}','App\Http\Controllers\Admin\CrudController@readBlogDetails')
+            ->name('blogdetails');
+    Route::post('/blogdetails/{article_id}','App\Http\Controllers\Admin\CrudController@storeComment')
+        ->name('comment.store');
+});
 
 
+//route to add posts
+Route::get('/create-post','App\Http\Controllers\Admin\CrudController@createPost');
+Route::post('/store-post','App\Http\Controllers\Admin\CrudController@storePost')
+    ->name('post.store');
 
 
 // to check relationship between porfoliocategory and portfolio
@@ -45,4 +51,10 @@ Route::get('/test',function(){
    return dd($portfolio);
 });*/
 
+Route::post('/blog','App\Http\Controllers\Admin\crudController@storeComments')
+        ->name('comment.store');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
