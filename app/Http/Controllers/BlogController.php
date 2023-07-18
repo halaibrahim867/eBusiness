@@ -41,6 +41,22 @@ class BlogController extends Controller
         return $comments->count();
     }
 
+    public function search(Request $request)
+    {
+        $query = $request->input('query');
+        $articles = Article::where('title', 'like', '%' . $query . '%')
+            ->orWhere('partial', 'like', '%' . $query . '%')
+            ->orWhere('content', 'like', '%' . $query . '%')
+            ->get();
+
+        $commentCount = $this->getCommentCount($articles);
+        $categories = ArticleCategory::all();
+        $tags = Tag::all();
+
+        return view('blog', compact('articles', 'commentCount', 'categories', 'tags'));
+    }
+
+
 
 
 }

@@ -37,6 +37,7 @@ Route::group(['prefix'=>'eBusiness'],function(){
         ->middleware('auth')->name('comment.store');
     Route::get('/blog/{category?}/{tag?}', 'App\Http\Controllers\BlogController@readBlog')->name('blog.index');
 
+    Route::get('/blog/search', 'App\Http\Controllers\BlogController@search')->name('blog.search');
 
 
 });

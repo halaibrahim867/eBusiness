@@ -12,8 +12,8 @@ class Team extends Model
     protected $fillable=['id','name','photo','photo_path','job_description','facebook_account','instagram_account','twitter_account'];
     public $timestamps=true;
 
-    public  function articles(){
+   /* public  function articles(){
         return $this->hasMany('App\Models\Article','team_id','id');
-    }
+    }*/
 
 }

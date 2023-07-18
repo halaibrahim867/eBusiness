@@ -41,9 +41,9 @@
                     <div class="page-head-blog">
                         <div class="single-blog-page">
                             <!-- search option start -->
-                            <form action="#">
+                            <form action="{{route('blog.search')}}" method="GET">
                                 <div class="search-option">
-                                    <input type="text" placeholder="Search...">
+                                    <input type="text" name="query" placeholder="Search...">
                                     <button class="button" type="submit">
                                         <i class="bi bi-search"></i>
                                     </button>
