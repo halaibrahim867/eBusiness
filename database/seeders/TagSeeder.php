@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Comment;
+
+use App\Models\Tag;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class CommentSeeder extends Seeder
+class TagSeeder extends Seeder
 {
-
     /**
      * Run the database seeds.
      *
@@ -16,6 +16,6 @@ class CommentSeeder extends Seeder
      */
     public function run()
     {
-        Comment::factory()->count(10)->create();
+        Tag::factory()->count(10)->create();
     }
 }

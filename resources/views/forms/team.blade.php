@@ -37,7 +37,7 @@
 </head>
 <body>
 
-@extends('components.header')
+@extends('layouts.components')
 @section('header')
 @endsection
 
@@ -60,22 +60,26 @@
 
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="job_description" placeholder="Enter Your Job Description">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="job_description"
+               placeholder="Enter Your Job Description">
 
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="facebook_account" placeholder="Enter Your Facebook Account">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="facebook_account"
+               placeholder="Enter Your Facebook Account">
 
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="twitter_account" placeholder="Enter Your Twitter Account">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="twitter_account"
+               placeholder="Enter Your Twitter Account">
 
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="instagram_account" placeholder="Enter Your Instagram Account">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="instagram_account"
+               placeholder="Enter Your Instagram Account">
 
     </div>
     <button type="submit" class="btn btn-primary">Save</button>

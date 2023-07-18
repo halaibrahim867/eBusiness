@@ -39,7 +39,7 @@
 <body>
 
 <!-- ======= Header ======= -->
-@extends('components.header')
+@extends('layouts.components')
 
 @section('header')
 @endsection
@@ -307,34 +307,34 @@
                 @foreach($teams as $person)
                     <div class="col-md-3 col-sm-3 col-xs-12">
                         <div class="single-team-member">
-                        <div class="team-img">
-                            <a href="#">
-                                <img src="{{ asset('team/'.$person->photo)}}" alt="{{$person->name}}">
-                            </a>
-                            <div class="team-social-icon text-center">
-                                <ul>
-                                    <li>
-                                        <a href="{{url($person-> facebook_account)}}">
-                                            <i class="bi bi-facebook"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{url($person-> twitter_account)}}">
-                                            <i class="bi bi-twitter"></i>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="{{url($person-> instagram_account)}}">
-                                            <i class="bi bi-instagram"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                            <div class="team-img">
+                                <a href="#">
+                                    <img src="{{ asset('team/'.$person->photo)}}" alt="{{$person->name}}">
+                                </a>
+                                <div class="team-social-icon text-center">
+                                    <ul>
+                                        <li>
+                                            <a href="{{url($person-> facebook_account)}}">
+                                                <i class="bi bi-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url($person-> twitter_account)}}">
+                                                <i class="bi bi-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="{{url($person-> instagram_account)}}">
+                                                <i class="bi bi-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
-                        </div>
-                        <div class="team-content text-center">
-                            <h4>{{$person -> name}}</h4>
-                            <p>{{$person -> job_description}}</p>
-                        </div>
+                            <div class="team-content text-center">
+                                <h4>{{$person -> name}}</h4>
+                                <p>{{$person -> job_description}}</p>
+                            </div>
                         </div>
                     </div>
                 @endforeach
@@ -373,23 +373,24 @@
                     </div>
                 </div>
             </div>
-           <div class="row wesome-project-1 fix">
+            <div class="row wesome-project-1 fix">
                 <!--Should add filter -->
-                    <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-app">App</li>
-                        <li data-filter=".filter-card">Card</li>
-                        <li data-filter=".filter-web">Web</li>
-                    </ul>
-                </div>
+                <ul id="portfolio-flters">
+                    <li data-filter="*" class="filter-active">All</li>
+                    <li data-filter=".filter-app">App</li>
+                    <li data-filter=".filter-card">Card</li>
+                    <li data-filter=".filter-web">Web</li>
+                </ul>
             </div>
+        </div>
 
-            <div class="row awesome-project-content portfolio-container">
+        <div class="row awesome-project-content portfolio-container">
 
-                <!-- portfolio-item start -->
+            <!-- portfolio-item start -->
 
-                @foreach($portfolios as $portfolio)
-                    <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item portfolio-item {{$portfolio->portfolio_categories_id}}">
+            @foreach($portfolios as $portfolio)
+                <div
+                    class="col-md-4 col-sm-4 col-xs-12 portfolio-item portfolio-item {{$portfolio->portfolio_categories_id}}">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{asset('portfolio/'.$portfolio->photo)}}" alt=""/></a>
@@ -405,11 +406,11 @@
                         </div>
                     </div>
                 </div>
-                    <!-- portfolio-item end -->
-                @endforeach
+                <!-- portfolio-item end -->
+            @endforeach
 
-                <!-- portfolio-item start -->
-               <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
+            <!-- portfolio-item start -->
+            <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{URL::asset('assets/img/portfolio/2.jpg')}}" alt=""/></a>
@@ -427,8 +428,8 @@
                 </div>
                 <!-- portfolio-item end -->
 
-                <!-- portfolio-item start -->
-               <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
+            <!-- portfolio-item start -->
+            <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-card">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{URL::asset('assets/img/portfolio/3.jpg')}}" alt=""/></a>
@@ -446,8 +447,8 @@
                 </div>
                 <!-- portfolio-item end -->
 
-                <!-- portfolio-item start -->
-                <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
+            <!-- portfolio-item start -->
+            <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{URL::asset('assets/img/portfolio/4.jpg')}}" alt=""/></a>
@@ -465,8 +466,8 @@
                 </div>
                 <!-- portfolio-item end -->
 
-                <!-- portfolio-item start -->
-               <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app">
+            <!-- portfolio-item start -->
+            <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-app">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{URL::asset('assets/img/portfolio/5.jpg')}}" alt=""/></a>
@@ -484,8 +485,8 @@
                 </div>
                 <!-- portfolio-item end -->
 
-                <!-- portfolio-item start -->
-               <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
+            <!-- portfolio-item start -->
+            <!-- <div class="col-md-4 col-sm-4 col-xs-12 portfolio-item filter-web">
                     <div class="single-awesome-project">
                         <div class="awesome-img">
                             <a href="#"><img src="{{URL::asset('assets/img/portfolio/6.jpg')}}" alt=""/></a>
@@ -503,8 +504,8 @@
                 </div>
                 <!-- portfolio-item end -->
 
-            </div>
         </div>
+    </div>
     </div><!-- End Admin Section -->
 
     <!-- ======= Pricing Section ======= -->

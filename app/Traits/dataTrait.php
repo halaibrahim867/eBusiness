@@ -2,7 +2,7 @@
 namespace App\Traits;
 
 Trait dataTrait{
-
+/*
     function saveImage($photo, $subfolder)
     {
         //save photo in folder
@@ -14,5 +14,5 @@ Trait dataTrait{
         return $file_name;
 
     }
-
+*/
 }

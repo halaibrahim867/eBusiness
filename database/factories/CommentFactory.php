@@ -4,7 +4,8 @@ namespace Database\Factories;
 
 use App\Models\Article;
 use App\Models\Comment;
-use App\Models\Subscriper;
+use App\Models\User;
+
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -22,12 +23,8 @@ class CommentFactory extends Factory
     {
         return [
             'content'=>$this->faker->paragraph(),
-            'article_id'=>function(){
-                return Article::inRandomOrder()->first()->id;
-            },
-            'subscriper_id'=>function(){
-                return Subscriper::inRandomOrder()->first()->id;
-            },
+            'article_id'=>$this->faker->randomElement(Article::pluck('id')),
+            'user_id'=>$this->faker->randomElement(User::pluck('id')),
             'created_at'=>$this->faker->dateTimeBetween('-1 year','now'),
             'updated_at'=>$this->faker->dateTimeBetween('-1 year','now'),
         ];

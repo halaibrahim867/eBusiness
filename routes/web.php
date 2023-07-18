@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,14 +29,22 @@ Route::post('/store-portfolio','App\Http\Controllers\Admin\CrudController@storeP
 
 Route::group(['prefix'=>'eBusiness'],function(){
     Route::get('/home','App\Http\Controllers\Admin\CrudController@readHome');
-    Route::get('/blog','App\Http\Controllers\Admin\CrudController@readBlog')
+    Route::get('/blog','App\Http\Controllers\BlogController@readBlog')
         ->name('blog');
-    Route::get('/blogdetails/{article_id}','App\Http\Controllers\Admin\CrudController@readBlogDetails')
+    Route::get('/blogdetails/{article_id}','App\Http\Controllers\BlogDetailsController@readBlogDetails')
             ->name('blogdetails');
-    Route::post('/blogdetails/{article_id}','App\Http\Controllers\Admin\CrudController@storeComment')
-        ->name('comment.store');
-});
+    Route::post('/blogdetails/{article_id}','App\Http\Controllers\CommentController@store')
+        ->middleware('auth')->name('comment.store');
+    Route::get('/blog/{category?}/{tag?}', 'App\Http\Controllers\BlogController@readBlog')->name('blog.index');
 
+
+
+});
+/*
+Route::middleware('auth')->group(function (){
+    Route::post('/blogdetails/{article_id}',[\App\Http\Controllers\CommentController::class,'store'])
+        ->name('comment.store');
+});*/
 
 //route to add posts
 Route::get('/create-post','App\Http\Controllers\Admin\CrudController@createPost');
@@ -51,9 +60,20 @@ Route::get('/test',function(){
    return dd($portfolio);
 });*/
 
-Route::post('/blog','App\Http\Controllers\Admin\crudController@storeComments')
-        ->name('comment.store');
+//Route::post('/blog','App\Http\Controllers\Admin\crudController@storeComments')->name('comment.store');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Auth::routes();
 

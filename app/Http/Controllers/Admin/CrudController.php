@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Article;
 use App\Models\Comment;
 use App\Models\Portfolio;
-use App\Models\Subscriper;
+
 use Carbon\Carbon;
 use App\Models\PortfolioCategory;
 use App\Models\Team;
@@ -16,7 +16,8 @@ use Illuminate\Http\Request;
 class CrudController extends Controller
 {
     //
-    use dataTrait;
+   // use dataTrait;
+    /*
     public function createPortfolio(){
         return view('forms.portfolio');
     }
@@ -33,10 +34,10 @@ class CrudController extends Controller
             'photo'=> $file_name,
         ]);
 
-    }
+    }*/
 
 
-
+/*
     public function createTeam(){
         return view('forms.team');
     }
@@ -99,7 +100,7 @@ class CrudController extends Controller
     }
 
 
-
+/*
     public function createpost(){
         return view('forms.post');
     }
@@ -116,8 +117,9 @@ class CrudController extends Controller
             'employee_id'=>$request->employee_id,
             'photo'=> $file_name,
         ]);
-    }
-  /*  public function storeComments(Request $request){
+    }*/
+    /*
+    public function storeComments(Request $request){
 
         Comment::create([
             'content'=>content,
@@ -128,28 +130,9 @@ class CrudController extends Controller
 
         ]);
     }*/
-    public function storeComment(Request $request){
-        $validatedDate=$request->validate([
-            'name'=>'required|max:255',
-            'email'=>'required|email|max:255',
-            'content'=>'required|max:255',
-            'article_id'=>'required|exists:articles,id'
-        ]);
-        $subscriper=Subscriper::firstOrCreate([
-            'name'=>$validatedDate['name'],
-            'email'=>$validatedDate['email']
-        ]);
-        $comment=new Comment();
-        $comment->content=$validatedDate['content'];
-        $comment->article_id=$validatedDate['article_id'];
-        $comment->subscriper_id=$subscriper->id;
 
-        $comment->save();
-
-        return redirect()->back()->with('success','Comment Submitted Successfully!');
-    }
-    public function readBlog(){
-        $articles=Article::paginate(3);
+    /*public function readBlog(){
+        $articles=Article::simplePaginate(5);
 
         $comments = $articles->pluck('comments')->flatten();
         $commentCount = $comments->count();
@@ -158,19 +141,20 @@ class CrudController extends Controller
     }
     public function readBlogDetails($article_id){
         $article=Article::find($article_id);
-        $comments=$article->comments;
+        $comments=$article->comments()->with('user')->get();
         $commentCount = $comments->count();
-        $articles=Article::all();
+
+        //$articles=Article::all();
         //find($article_id);
-        return view('blogdetails',compact('articles','comments','commentCount'));
-    }
+        return view('blogdetails',compact('article','comments','commentCount'));
+    }*/
     // to check data that i want retrive about articles
 
     public function showArticles($article_id){
         $articles=Article::find($article_id);
         $comments=$articles->comments;
 
-       var_dump($articles);
+       dd($articles);
        // return view('welcome',compact('comment'));
     }
 

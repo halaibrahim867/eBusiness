@@ -37,7 +37,7 @@
 </head>
 <body>
 
-@extends('components.header')
+@extends('layouts.components')
 @section('header')
 @endsection
 
@@ -59,7 +59,8 @@
 
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label"></label>
-        <input type="text" class="form-control" id="exampleInputPassword1" name="content" placeholder="Enter the content">
+        <input type="text" class="form-control" id="exampleInputPassword1" name="content"
+               placeholder="Enter the content">
 
     </div>
 
